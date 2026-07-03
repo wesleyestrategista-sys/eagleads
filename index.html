@@ -507,79 +507,72 @@ footer .logo{justify-content:center;margin-bottom:16px;font-size:1.05rem}
 </section>
 
 <!-- DEPOIMENTOS -->
-<section class="blk testi">
-  <div class="wrap">
-    <div class="blk-head center rv">
-      <div class="eyebrow" style="justify-content:center">Prova de verdade</div>
-      <h2>Não acredita na gente? Ótimo. <span class="hl">Acredita neles.</span></h2>
-      <p style="margin-inline:auto">A gente podia encher essa página de número bonito. Preferimos deixar quem já tirou a carteira falar por nós.</p>
-    </div>
+
+<div id="testi-shadow-root"></div>
+<script>
+(function() {
+  const root = document.getElementById('testi-shadow-root');
+  const shadow = root.attachShadow({mode: 'open'});
+  
+  shadow.innerHTML = `
+    <style>
+      :host { display: block; padding: 96px 0; background: #0C0F15; color: #F4F5F8; font-family: sans-serif; }
+      .testi-grid { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px; 
+        max-width: 1180px; 
+        margin: 52px auto 0; 
+        padding: 0 24px;
+      }
+      @media(max-width: 992px) { .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media(max-width: 580px) { .testi-grid { grid-template-columns: 1fr; } }
+      
+      .testi-card { background: #12151D; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; overflow: hidden; }
+      .testi-video-box { aspect-ratio: 9/16; position: relative; background: #000; }
+      .testi-vimeo-container { padding: 177.77% 0 0 0; position: relative; width: 100%; }
+      iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+      
+      .testi-info { padding: 20px; }
+      .testi-name { font-weight: 800; font-size: 1.05rem; margin: 0; color: #fff; }
+      .testi-company { color: #727685; font-size: 0.86rem; margin-top: 2px; }
+      .testi-result { margin-top: 12px; color: #FF2D63; font-weight: 700; font-size: 0.96rem; display: flex; align-items: center; gap: 7px; }
+      
+      .blk-head { text-align: center; max-width: 800px; margin: 0 auto; padding: 0 24px; }
+      .eyebrow { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #E71846; margin-bottom: 18px; }
+      h2 { font-size: 2.5rem; margin: 0; font-weight: 900; }
+      .hl { color: #E71846; }
+      p { color: #AEB2BD; margin-top: 18px; }
+    </style>
     
-    <div class="testi-grid-new">
-      <!-- Depoimento 1: Sebastião -->
-      <div class="testi-vid-item rv">
-        <div class="testi-player-wrap">
-          <div class="testi-vimeo-container">
-            <iframe src="https://player.vimeo.com/video/1206814757?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Depoimento Sebastião"></iframe>
-          </div>
-        </div>
-        <div class="testi-vid-meta">
-          <div class="name">Sebastião</div>
-          <div class="co">Braga Food Service</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Resultado real com tráfego pago</div>
-        </div>
-      </div>
+    <div class="blk-head">
+      <div class="eyebrow">Prova de verdade</div>
+      <h2>Não acredita na gente? Ótimo. <span class="hl">Acredita neles.</span></h2>
+      <p>A gente podia encher essa página de número bonito. Preferimos deixar quem já tirou a carteira falar por nós.</p>
+    </div>
 
-      <!-- Depoimento 2: Valmor Lazzaris -->
-      <div class="testi-vid-item rv">
-        <div class="testi-player-wrap">
-          <div class="testi-vimeo-container">
-            <iframe src="https://player.vimeo.com/video/1206814758?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Depoimento Valmor Lazzaris"></iframe>
-          </div>
-        </div>
-        <div class="testi-vid-meta">
-          <div class="name">Valmor Lazzaris</div>
-          <div class="co">AV Embalagens</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Resultado real com tráfego pago</div>
-        </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-video-box"><div class="testi-vimeo-container"><iframe src="https://player.vimeo.com/video/1206814757"></iframe></div></div>
+        <div class="testi-info"><h4 class="testi-name">Sebastião</h4><div class="testi-company">Braga Food Service</div><div class="testi-result">Resultado real</div></div>
       </div>
-
-      <!-- Depoimento 3: Bruna Fragoso -->
-      <div class="testi-vid-item rv">
-        <div class="testi-player-wrap">
-          <div class="testi-vimeo-container">
-            <iframe src="https://player.vimeo.com/video/1206814759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Depoimento Bruna Fragoso"></iframe>
-          </div>
-        </div>
-        <div class="testi-vid-meta">
-          <div class="name">Bruna Fragoso</div>
-          <div class="co">Mabru Churrasqueiras</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Resultado real com tráfego pago</div>
-        </div>
+      <div class="testi-card">
+        <div class="testi-video-box"><div class="testi-vimeo-container"><iframe src="https://player.vimeo.com/video/1206814758"></iframe></div></div>
+        <div class="testi-info"><h4 class="testi-name">Valmor Lazzaris</h4><div class="testi-company">AV Embalagens</div><div class="testi-result">Resultado real</div></div>
       </div>
-
-      <!-- Depoimento 4: Rodrigo Rudolf -->
-      <div class="testi-vid-item rv">
-        <div class="testi-player-wrap">
-          <div class="testi-vimeo-container">
-            <iframe src="https://player.vimeo.com/video/1206814760?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Depoimento Rodrigo Rudolf"></iframe>
-          </div>
-        </div>
-        <div class="testi-vid-meta">
-          <div class="name">Rodrigo Rudolf</div>
-          <div class="co">Restaurante Boa Vista</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Resultado real com tráfego pago</div>
-        </div>
+      <div class="testi-card">
+        <div class="testi-video-box"><div class="testi-vimeo-container"><iframe src="https://player.vimeo.com/video/1206814759"></iframe></div></div>
+        <div class="testi-info"><h4 class="testi-name">Bruna Fragoso</h4><div class="testi-company">Mabru Churrasqueiras</div><div class="testi-result">Resultado real</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-video-box"><div class="testi-vimeo-container"><iframe src="https://player.vimeo.com/video/1206814760"></iframe></div></div>
+        <div class="testi-info"><h4 class="testi-name">Rodrigo Rudolf</h4><div class="testi-company">Restaurante Boa Vista</div><div class="testi-result">Resultado real</div></div>
       </div>
     </div>
-    <div class="testi-cta rv">
-      <h3>O próximo depoimento dessa página pode ser o <span style="color:var(--brand)">seu.</span></h3>
-      <button class="btn btn--lg" data-open>Solicitar diagnóstico gratuito
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
+  `;
+})();
+</script>
+
 
 <!-- FAQ -->
 <section class="blk faq">
