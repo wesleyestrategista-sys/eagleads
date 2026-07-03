@@ -246,7 +246,7 @@ section{position:relative}
 
 /* DEPOIMENTOS */
 .testi{background:var(--bg-2)}
-.vids{margin-top:52px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.vids{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .vid{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden;
   transition:transform .25s,border-color .25s}
 .vid:hover{transform:translateY(-4px);border-color:var(--line)}
@@ -349,16 +349,6 @@ footer .logo{justify-content:center;margin-bottom:16px;font-size:1.05rem}
 .done-screen h3{font-family:'Archivo';font-weight:900;font-size:1.5rem}
 .done-screen p{color:var(--ink-soft);margin-top:12px}
 @media(max-width:560px){.modal-card{max-width:100%}.q-title{font-size:1.15rem}}
-
-/* ---------- VIDEO PLAYER IN-LINE ---------- */
-.vid-thumb{position:relative;overflow:hidden}
-.vid-thumb.active{cursor:default}
-.vid-thumb.active .play{display:none}
-.vid-thumb img{transition:opacity .3s}
-.vid-thumb.active img{opacity:0}
-.vid-player-wrap{position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;animation:fade .3s}
-.vid-player-wrap video{width:100%;height:100%;object-fit:contain}
-
 </style>
 </head>
 <body>
@@ -526,37 +516,24 @@ footer .logo{justify-content:center;margin-bottom:16px;font-size:1.05rem}
     </div>
     <div class="vids">
       <div class="vid rv">
-        <div class="vid-thumb" data-vid-src="videos/braga_h264.mp4">
-          <img src="videos/thumb-braga.jpg" alt="Sebastião - Braga Food Service" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-        <div class="vid-meta"><div class="name">Sebastião</div><div class="co">Braga Food Service</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+R$ 180.000 em 6 meses</div></div>
+        <div class="vid-thumb"><div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="ph-note">Espaço reservado pro vídeo do depoimento</div></div>
+        <div class="vid-meta"><div class="name">[Nome do empresário]</div><div class="co">[Empresa / segmento]</div>
+          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Saiu de [X] pra [Y] em [Z] meses</div></div>
       </div>
       <div class="vid rv">
-        <div class="vid-thumb" data-vid-src="videos/avembalagens_h264.mp4">
-          <img src="videos/thumb-avembalagens.jpg" alt="Valmor Lazzaris - AV Embalagens" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-        <div class="vid-meta"><div class="name">Valmor Lazzaris</div><div class="co">AV Embalagens</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+R$ 320.000 em 4 meses</div></div>
+        <div class="vid-thumb"><div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="ph-note">Espaço reservado pro vídeo do depoimento</div></div>
+        <div class="vid-meta"><div class="name">[Nome do empresário]</div><div class="co">[Empresa / segmento]</div>
+          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Saiu de [X] pra [Y] em [Z] meses</div></div>
       </div>
       <div class="vid rv">
-        <div class="vid-thumb" data-vid-src="videos/mabru_h264.mp4">
-          <img src="videos/thumb-mabru.jpg" alt="Bruna Fragoso - Mabru Churrasqueiras" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-        <div class="vid-meta"><div class="name">Bruna Fragoso</div><div class="co">Mabru Churrasqueiras</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+R$ 250.000 em 5 meses</div></div>
+        <div class="vid-thumb"><div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="ph-note">Espaço reservado pro vídeo do depoimento</div></div>
+        <div class="vid-meta"><div class="name">[Nome do empresário]</div><div class="co">[Empresa / segmento]</div>
+          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Saiu de [X] pra [Y] em [Z] meses</div></div>
       </div>
-      <div class="vid rv">
-        <div class="vid-thumb" data-vid-src="videos/boavista_h264.mp4">
-          <img src="videos/thumb-boavista.jpg" alt="Rodrigo Rudolf - Restaurante Boa Vista" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-        <div class="vid-meta"><div class="name">Rodrigo Rudolf</div><div class="co">Restaurante Boa Vista</div>
-          <div class="res"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+R$ 150.000 em 3 meses</div></div>
-      </div>
+    </div>
     <div class="testi-cta rv">
       <h3>O próximo depoimento dessa página pode ser o <span style="color:var(--brand)">seu.</span></h3>
       <button class="btn btn--lg" data-open>Solicitar diagnóstico gratuito
@@ -759,52 +736,5 @@ function finish(){
   body.querySelector('[data-close2]').addEventListener('click',closeModal);
 }
 </script>
-
-<script>
-// Video player functionality for testimonials
-document.querySelectorAll('.vid-thumb').forEach(function(thumb) {
-  thumb.addEventListener('click', function() {
-    if (this.classList.contains('active')) {
-      var video = this.querySelector('video');
-      if (video) video.pause();
-      return;
-    }
-
-    // Close any other open videos
-    document.querySelectorAll('.vid-thumb.active').forEach(function(other) {
-      var otherVideo = other.querySelector('video');
-      if (otherVideo) {
-        otherVideo.pause();
-        otherVideo.remove();
-      }
-      var wrap = other.querySelector('.vid-player-wrap');
-      if (wrap) wrap.remove();
-      other.classList.remove('active');
-      other.querySelector('.play').style.display = 'flex';
-    });
-
-    this.classList.add('active');
-    this.querySelector('.play').style.display = 'none';
-
-    var src = this.getAttribute('data-vid-src');
-    if (!src) return;
-
-    // Create video player wrapper
-    var wrap = document.createElement('div');
-    wrap.className = 'vid-player-wrap';
-
-    var video = document.createElement('video');
-    video.src = src;
-    video.controls = true;
-    video.autoplay = true;
-    video.setAttribute('playsinline', '');
-    video.setAttribute('preload', 'metadata');
-
-    wrap.appendChild(video);
-    this.appendChild(wrap);
-  });
-});
-</script>
-
 </body>
 </html>
